@@ -27,6 +27,6 @@ scikit-learn==1.1.2
 scipy==1.9.1
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.2.4
-scikit-learn-intelex==2021.20210714.120553
+scikit-learn==1.1.2
 sklearn==0.0
 streamlit==1.10.0
