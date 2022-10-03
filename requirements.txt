@@ -1,6 +1,5 @@
 ﻿absl-py==1.0.0
 altair==4.2.0
-anaconda-client @ file:///C:/ci/anaconda-client_1635342725944/work
 anaconda-navigator==2.1.1
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
 anyio @ file:///C:/ci/anyio_1620153135622/work/dist
