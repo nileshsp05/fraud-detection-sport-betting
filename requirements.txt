@@ -1,6 +1,5 @@
 ﻿absl-py==1.0.0
 altair==4.2.0
-anaconda-navigator==2.1.1
 appdirs==1.4.4
 argh==0.26.2
 asgiref==3.5.2
