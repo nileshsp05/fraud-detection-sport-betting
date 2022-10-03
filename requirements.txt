@@ -21,7 +21,7 @@ certifi==2021.10.8
 click==8.0.3
 commonmark==0.9.1
 comtypes==1.1.10
-conda==4.10.3
+conda<4.10.3
 conda-build==3.21.6
 conda-verify==3.4.2
 cycler==0.10.0
