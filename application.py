@@ -4,6 +4,12 @@ import pickle
 import numpy as np
 from sklearn.pipeline import Pipeline
 
+
+headers={
+  "autherization":st.secrets["auth_token"]
+  "content-type":"application/python"
+} 
+
 # import the model
 pipe = pickle.load(open('model_bet_1.pkl', 'rb'))
 bet = pickle.load(open('bet_1.pkl', 'rb'))
