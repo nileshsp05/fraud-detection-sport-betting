@@ -7,7 +7,6 @@ from sklearn.pipeline import Pipeline
 
 headers={
   "autherization":st.secrets["auth_token"]
-  "content-type":"application/python"
 } 
 
 # import the model
