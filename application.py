@@ -16,7 +16,7 @@ bet = pickle.load(open('bet_1.pkl', 'rb'))
 st.title("Fraud Detection")
 
 User_ID =  st.number_input('User ID',min_value=1,max_value=100000000000000)
-inactive_days = st.number_input('Inactive days')
+inactive_days = st.number_input('Inactive days',min_value=0,max_value=45000)
 Country_Name = st.selectbox('Country_Name', ['Afghanistan','Albania','Algeria','Andorra','Angola','Antigua & Deps','Argentina',
  'Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan',
  'Bolivia','Bosnia Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina','Burundi','Cambodia','Cameroon','Canada','Cape Verde',
@@ -39,7 +39,7 @@ banned_country=['Qatar','Argentina','United Arab Emirates','Brunei','Cambodia','
  'Bahrain','Jordan','Kuwait','Libya','Oman','Saudi Arabia','Tunisia','Yemen','Cambodia','Syria','Cuba','Vietnam','Malaysia','Russian Federation']
 
 Gender = st.selectbox('Gender', bet['Gender'].unique())
-Year_of_Birth = Year_of_Birth = st.number_input('Year_of_Birth')
+Year_of_Birth = Year_of_Birth = st.number_input('Year_of_Birth',min_value=1895,max_value=2022)
 age_at_registration = st.number_input('age_at_registration',min_value=0,max_value=125)
 KYC_Status = st.selectbox('KYC_Status', bet['KYC_Status'].unique())
 sum_stakes_fixedodds = st.number_input('Sum Stakes Fixedodds',min_value=0,max_value=10000000)
@@ -81,7 +81,8 @@ if st.button('Fraud Status'):
                    st.title("Fraud Status = Fraudulent")
                 else:
                     query = query.reshape(1, 21)
-                    if pipe.predict(query)[0] == 1:
+                    x=(pipe.predict(query)[0] == 1)
+                    if x == 1:
                         st.title("Fraud Status = Fraudulent")
                     else:
                        st.title("Fraud Status = Non Fraudulent")
