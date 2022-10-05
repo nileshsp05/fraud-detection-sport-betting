@@ -81,8 +81,10 @@ if st.button('Fraud Status'):
                    st.title("Fraud Status = Fraudulent")
                 else:
                     query = query.reshape(1, 21)
-                    st.title("The predicted price of this Course is  " + str(((pipe.predict(query)[0]))))
-                       
+                    if pipe.predict(query)[0] == 1:
+                        st.title("Fraud Status = Fraudulent")
+                    else:
+                       st.title("Fraud Status = Non Fraudulent")
                 
                    
              
