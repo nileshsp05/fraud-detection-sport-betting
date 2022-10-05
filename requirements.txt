@@ -3,3 +3,4 @@ numpy
 streamlit
 seaborn
 sklearn
+scikit-learn==1.0.2
